@@ -1,0 +1,47 @@
+body{
+  background-image: url("./images/bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: fantasy;
+}
+
+.navbar {
+  justify-content: space-between;
+  text-align: center;
+  align-items:center;
+  display: flex;
+  background-color: #1053da;
+  flex-direction: column;
+  color: white;
+}
+
+.nav-link {
+  justify-content: space-between;
+  color: white;
+}
+
+.nav-link:hover{
+  color: black;
+}
+
+.username{
+  margin-left: 20px;
+  margin-top: 11px;
+  padding-left: 20px; 
+  color: black; 
+}
+
+h1, .email-label, .password-label, .login, .register {
+  color: white;
+  font-weight: bolder;
+}
+
+.login-btn {
+  background-color: darkblue;
+}
+
+.register-btn {
+  padding-left: 20px;
+  margin-left: 20px;
+  background-color: lightseagreen;  
+}
