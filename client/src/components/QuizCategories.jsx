@@ -13,7 +13,7 @@ export default function QuizCategories() {
   const [categories, setCategories] = useState([]);
   const [category, setCategory] = useState({ id: "", name: "" });
 
-  const [quizNumber, setQuizNumber] = useState(null);
+  const [quizNumber, setQuizNumber] = useState("");
   const [difficulty, setDifficulty] = useState({ id: "", name: "" });
 
   const [quizData, setQuizData] = useState([]);
@@ -127,6 +127,7 @@ export default function QuizCategories() {
                     label="Select category"
                     labelId="category-select-label"
                     onChange={handleSelectChange}
+                    value={category.id}
                   >
                     {categories.map((category) => (
                       <MenuItem key={category.id} value={category.id}>

@@ -44,7 +44,7 @@ function App() {
       <div className='navbar'>
         <Nav justify variant="tabs" defaultActiveKey="/home">
           <Nav.Item>
-            <NavLink className="nav-link" to="/home">Home</NavLink>
+            <Link className="nav-link" to="/home">Home</Link>
           </Nav.Item>
           <Nav.Item>
             <Link className="nav-link" to="/about">About</Link>
