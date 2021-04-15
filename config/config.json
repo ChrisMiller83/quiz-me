@@ -1,0 +1,13 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": null,
+    "database": "quiz_me",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  
+  "production": {
+    "use-env-variable": "DATABASE-URL"   
+  }
+}
