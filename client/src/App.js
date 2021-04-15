@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
-import { Container, Nav, } from 'react-bootstrap';
+import { Container, Nav, NavLink, } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import './App.css';
@@ -14,7 +14,7 @@ import { setUser } from './redux/actions';
 function App() {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
-  const history= useHistory();
+  const history = useHistory();
   const [userStatus, setUserStatus] = useState('LOADING');
   const logout = () => {
     fetch('/api/v1/users/logout')
@@ -40,44 +40,44 @@ function App() {
   }, [dispatch])
 
   return (
-    <div className="App">      
+    <div className="App">
       <div className='navbar'>
         <Nav justify variant="tabs" defaultActiveKey="/home">
           <Nav.Item>
-            <Link className="nav-link" to="/home">Home</Link>
+            <NavLink className="nav-link" to="/home">Home</NavLink>
           </Nav.Item>
           <Nav.Item>
             <Link className="nav-link" to="/about">About</Link>
           </Nav.Item>
           <Nav.Item>
             <Link className="nav-link" to="/results">Results</Link>
-          </Nav.Item> 
-          
-              {user ? (
-                <>
-                <span className='username'>
-                  {user.username}
-                </span>  
-                  <br/>
-                  <Link className="nav-link" variant="danger" onClick={logout}>
-                    Logout
-              </Link>
-                </>
-              ) : (
-                <>
-                    <Link className="nav-link" variant="success" to="/login">
-                    Login
-              </Link>                    
-                </>
-              )}
-          
+          </Nav.Item>
+
+          {user ? (
+            <>
+              <span className='username'>
+                {user.username}
+              </span>
+              <br />
+              <NavLink className="nav-link" variant="danger" onClick={logout}>
+                Logout
+              </NavLink>
+            </>
+          ) : (
+            <>
+              <NavLink className="nav-link" variant="success" to="/login">
+                Login
+              </NavLink>
+            </>
+          )}
+
 
         </Nav>
       </div>
-      
-        {/* {userStatus === 'LOADING' && 'Loading...'}
+
+      {/* {userStatus === 'LOADING' && 'Loading...'}
         {userStatus === 'CHECKED' && ( */}
-        <Container style={{ margin: '2em auto' }}>
+      <Container style={{ margin: '2em auto' }}>
         <Switch>
           <Route path="/" exact>
             <Redirect to="/login" />
@@ -99,9 +99,9 @@ function App() {
           </Route>
         </Switch>
       </Container>
-      {/* )} */} 
-      
-      
+      {/* )} */}
+
+
     </div>
   );
 }

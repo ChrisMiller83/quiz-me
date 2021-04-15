@@ -2,7 +2,7 @@ body{
   background-image: url("./images/bg.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: fantasy;
+  font-family: fantasy;  
 }
 
 .navbar {
@@ -28,7 +28,7 @@ body{
   margin-left: 20px;
   margin-top: 11px;
   padding-left: 20px; 
-  color: black; 
+  color: black;   
 }
 
 h1, .email-label, .password-label, .login, .register {
