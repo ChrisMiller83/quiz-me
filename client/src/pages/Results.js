@@ -32,7 +32,7 @@ export default function Results() {
               </Card.Title>              
               <Card.Title className="answers-label">
                 <h6 className="answers-label">Correct Answers:</h6>
-                {result.answers.length} out of {result.answers.filter((a) => a.isCorrect)}
+                {result.answers.filter((a) => a.isCorrect)} out of {result.answers.length}
               </Card.Title>
               <Button className="deleteButton" onClick={()=>deleteResults(index)}><ClearIcon/></Button>
             </Card>
