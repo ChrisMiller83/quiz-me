@@ -52,26 +52,26 @@ function App() {
           </Nav.Item>
           <Nav.Item>
             <Link className="nav-link" to="/results">Results</Link>
+          </Nav.Item>         
+          <Nav.Item>
+            {user ? (
+              <>
+                <span className='username'>
+                  {user.username}
+                </span>
+                <br />
+                <NavLink className="nav-link" variant="danger" onClick={logout}>
+                  Logout
+                </NavLink>
+              </>
+            ) : (
+              <>
+                <NavLink className="nav-link" variant="success" to="/login">
+                  Login
+                </NavLink>
+              </>
+            )}
           </Nav.Item>
-
-          {user ? (
-            <>
-              <span className='username'>
-                {user.username}
-              </span>
-              <br />
-              <NavLink className="nav-link" variant="danger" onClick={logout}>
-                Logout
-              </NavLink>
-            </>
-          ) : (
-            <>
-              <NavLink className="nav-link" variant="success" to="/login">
-                Login
-              </NavLink>
-            </>
-          )}
-
 
         </Nav>
       </div>
