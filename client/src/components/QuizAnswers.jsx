@@ -84,7 +84,7 @@ useEffect(() => {
 
 return !processedAnswers || !processedAnswers.length ? (
   <>
-    <Typography variant="h1" className={classes.mainTitle}>
+    <Typography variant="h4" className={classes.mainTitle}>
       Answer following Questions:
     </Typography>
     <form onSubmit={handleResult}>
@@ -92,7 +92,7 @@ return !processedAnswers || !processedAnswers.length ? (
         <Grid item xs={12} sm={6} md={4} lg={3}>
           {quizData.map((quiz) => (
             <Paper key={quiz.question} className={classes.paper}>
-              <Typography variant="h5" className={classes.question}>
+              <Typography variant="h4" className={classes.question}>
                 <span dangerouslySetInnerHTML={createMarkup(quiz.question)} />
               </Typography>
               <FormControl fullWidth variant="outlined">
