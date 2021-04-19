@@ -2,6 +2,7 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { createDeleteResults } from '../redux/actions';
+import ClearIcon from '@material-ui/icons/Clear';
 
 export default function Results() {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ export default function Results() {
                 <h6 className="answers-label">Correct Answers:</h6>
                 {result.answers.length} out of {result.answers.filter((a) => a.isCorrect).length}
               </Card.Title>
-              <Button variant="danger" onClick={()=>deleteResults(index)}>X</Button>
+              <Button className="deleteButton" onClick={()=>deleteResults(index)}><ClearIcon/></Button>
             </Card>
           </div>  
         )

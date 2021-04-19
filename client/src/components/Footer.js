@@ -16,16 +16,16 @@ const Footer = () => {
       </h6>
       <Container>
         <Row className='footer'>     
-            <h6>Contact Us:</h6>
+            <h5>Contact Us:</h5>
             <a href="mailto:chrismillerdev2021@gmail.com">
               <EmailIcon  className="EmailIcon"/>
             </a>
             <br/>         
-            <h6>Social Media:</h6>
-            <a href="https://www.linkedin.com/in/chris-miller-0450a1aa/" target="_blank">   
+            <h5>Social Media:</h5>
+          <a href="https://www.linkedin.com/in/chris-miller-0450a1aa/" rel="noreferrer" target="_blank">
               <LinkedInIcon  className="LinkedInIcon"/>
             </a>
-          <a href="https://github.com/ChrisMiller83" target="_blank">
+          <a href="https://github.com/ChrisMiller83" rel="noreferrer" target="_blank">
               <GitHubIcon className="GitHubIcon" />
             </a>
             

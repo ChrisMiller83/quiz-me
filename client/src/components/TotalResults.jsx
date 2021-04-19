@@ -2,7 +2,6 @@ import { Button, Typography } from "@material-ui/core";
 import { useEffect } from "react"
 import AnswersReview from "./AnswersReview";
 
-
 const TotalResults = ({
   classes,
   resetQuiz,

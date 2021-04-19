@@ -50,7 +50,7 @@ body{
   margin-top: auto;
 }
 
-h1, h6, p, .email-label, .password-label, .login, .register {
+h1, h5 ,h6, p, .email-label, .password-label, .login, .register {
   color: white;
   font-weight: bolder;
 }
@@ -75,31 +75,25 @@ h1, h6, p, .email-label, .password-label, .login, .register {
 }
 
 .cat-label {
-  color: orange;
+  color: black;
   text-align: center;
   font-size: smaller;
   padding-top: 5px;
-  padding-left: 10px;
+  padding-left: 10px;  
 }
 
 .diff-label {
-  color: green;
+  color: blue;
   text-align: center;
   font-size: smaller;
   padding-top: 5px;
   padding-left: 10px;
 }
 
-.total-label {
-  color: yellow;
-  text-align: center;
-  font-size: smaller;
-  padding-top: 5px;
-  padding-left: 10px;
-}
+
 
 .answers-label {
-  color: red;
+  color: green;
   text-align: center;
   font-size: smaller;
   padding-top: 5px;
@@ -113,6 +107,13 @@ h1, h6, p, .email-label, .password-label, .login, .register {
 
 .EmailIcon, .LinkedInIcon, .GitHubIcon {
   color: white;
+}
+
+.deleteButton {
+  justify-content: flex-end;
+  width: min-content;
+  height: min-content;
+  margin-left: auto;
 }
 
 
