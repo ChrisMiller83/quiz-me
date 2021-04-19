@@ -4,6 +4,7 @@ import { Container, Nav, NavLink, } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, Redirect, Route, Switch, useHistory } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer';
 import About from './pages/About';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -75,9 +76,8 @@ function App() {
         </Nav>
       </div>
 
-      {/* {userStatus === 'LOADING' && 'Loading...'}
-        {userStatus === 'CHECKED' && ( */}
-      <Container style={{ margin: '2em auto' }}>
+      
+      <Container className="page" style={{ margin: '2em auto' }}>
         <Switch>
           <Route path="/" exact>
             <Redirect to="/login" />
@@ -99,9 +99,9 @@ function App() {
           </Route>
         </Switch>
       </Container>
-      {/* )} */}
-
-
+      
+        <br/>  
+      <Footer />
     </div>
   );
 }

@@ -142,7 +142,7 @@ export default function QuizCategories() {
                 </FormControl>
               </Grid>
 
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6} md={4} lg={3}>
                 <FormControl fullWidth variant="outlined">
                   <InputLabel id="difficulty-select-label">
                     Select Difficulty:
@@ -197,6 +197,8 @@ export default function QuizCategories() {
             categories={categories}
             currentQuizStep={currentQuizStep}
             setCurrentQuizStep={setCurrentQuizStep}
+            category={category}
+            difficulty={difficulty}
           />
         )}
       </Paper>

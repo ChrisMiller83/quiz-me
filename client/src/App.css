@@ -1,8 +1,19 @@
 body{
   background-image: url("./images/bg.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: 0% 0%;
+  background-size: 100% 100%;
   font-family: fantasy;  
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -31,7 +42,15 @@ body{
   color: black;   
 }
 
-h1, .email-label, .password-label, .login, .register {
+.page{
+  flex-grow: 1;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+h1, h6, p, .email-label, .password-label, .login, .register {
   color: white;
   font-weight: bolder;
 }
@@ -45,3 +64,56 @@ h1, .email-label, .password-label, .login, .register {
   margin-left: 20px;
   background-color: lightseagreen;  
 }
+
+.results-card {  
+  flex-direction: row;
+  justify-items: space-evenly;
+  width: 'auto';
+  background-color: rgb(227, 231, 233);
+  color: 'white';
+  margin: 10px;
+}
+
+.cat-label {
+  color: orange;
+  text-align: center;
+  font-size: smaller;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.diff-label {
+  color: green;
+  text-align: center;
+  font-size: smaller;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.total-label {
+  color: yellow;
+  text-align: center;
+  font-size: smaller;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.answers-label {
+  color: red;
+  text-align: center;
+  font-size: smaller;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+
+.footer {
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.EmailIcon, .LinkedInIcon, .GitHubIcon {
+  color: white;
+}
+
+
+

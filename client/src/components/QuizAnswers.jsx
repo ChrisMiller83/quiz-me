@@ -1,11 +1,15 @@
 import { Button, FormControl, Grid, InputLabel, MenuItem, Paper, Select, Typography } from "@material-ui/core";
 import { useEffect, useState } from "react"
+import { useDispatch } from "react-redux";
 import { createMarkup } from "../helpers";
+import { addResults } from "../redux/actions";
 import TotalResults from "./TotalResults";
 
 
 const QuizAnswers = ({
   classes,
+  category,
+  difficulty,
   quizData,
   resetQuiz,
   currentQuizStep,
@@ -13,6 +17,7 @@ const QuizAnswers = ({
 }) => {
   const [selectedAnswers, setSelectedAnswers] = useState([]);
   const [processedAnswers, setProcessedAnswers] = useState([]);
+  const dispatch = useDispatch();
 
   const handleResult = (e) => {
     e.preventDefault();
@@ -31,6 +36,11 @@ const QuizAnswers = ({
         question,
       };
     });
+    dispatch(addResults({
+      category: category,
+      difficulty: difficulty,
+      answers: processedAnswers,
+    }));
     setProcessedAnswers(processedAnswers);
   };
 
@@ -75,11 +85,11 @@ useEffect(() => {
 return !processedAnswers || !processedAnswers.length ? (
   <>
     <Typography variant="h1" className={classes.mainTitle}>
-      Answer flowing Questions:
+      Answer following Questions:
     </Typography>
     <form onSubmit={handleResult}>
       <Grid container spacing={4}>
-        <Grid item xs={12}>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
           {quizData.map((quiz) => (
             <Paper key={quiz.question} className={classes.paper}>
               <Typography variant="h5" className={classes.question}>
