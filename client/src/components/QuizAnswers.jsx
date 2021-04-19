@@ -92,9 +92,9 @@ return !processedAnswers || !processedAnswers.length ? (
         <Grid item xs={12} sm={6} md={4} lg={3}>
           {quizData.map((quiz) => (
             <Paper key={quiz.question} className={classes.paper}>
-              <Typography variant="h4" className={classes.question}>
+              <h4>
                 <span dangerouslySetInnerHTML={createMarkup(quiz.question)} />
-              </Typography>
+              </h4>
               <FormControl fullWidth variant="outlined">
                 <InputLabel id="answer-select-label">
                   Select answer:
